@@ -1,0 +1,10 @@
+{
+  "version": "0.2.1",
+  "tasks": [
+    {
+      "taskLabel": "задача-Labs2",
+      "appliesTo": "Nikolaev_Vlad_lab/Labs2/",
+      "type": "launch"
+    }
+  ]
+}
