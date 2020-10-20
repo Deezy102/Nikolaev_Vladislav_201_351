@@ -6,13 +6,11 @@ using std::endl;
 
 void input_mas(int*& arr, int* size, int*& sum_arr) {
 	if (arr != nullptr) {
-		delete[] arr;
-
+		delete[] arr; //очищение памяти 
 	}
 	cout << "Введите длину массива: ";
 	cin >> *size;
-	//cout << "Введите значения массива\n";
-	arr = new int[*size];
+	arr = new int[*size];//массив длины сайз задается при помощи функции рандома
 	srand(time(0));
 	for (int i = 0; i < *size; i++) {
 		arr[i] = 100 + rand() % 9900;
@@ -30,22 +28,22 @@ void SumChetPos(int* arr, const int size, int* sum_arr) {
 		int sum = 0;
 		int x = arr[i];
 		while (x > 0) {
-			x = x / 10;
-			sum += x % 10;
-			x = x / 10;
+			x /= 10;//убираем нечетный разряд
+			sum += x % 10;//увеличиваем сумму на цифру в четном разряде 
+			x /= 10;//убираем считанный разряд
 		}
-		sum_arr[i] = sum;
+		sum_arr[i] = sum;//записываем в соответсвующий раздел массива для сумм сумму определненного числа
 	}
 }
 void SortChetPos(int* arr, const int size, int* sum_arr) {
 	int t = 0;
 	for (int i = 0; i < size; i++) {
 		for (int j = 0; j < size - i - 1; j++) {
-			if (sum_arr[j] > sum_arr[j + 1]) {
+			if (sum_arr[j] > sum_arr[j + 1]) {//сортируем пузырьком массив с суммами и если там элементы меняются местами 
 				t = sum_arr[j];
 				sum_arr[j] = sum_arr[j + 1];
 				sum_arr[j + 1] = t;
-
+				//то меняем и соответствующие элементы и в исходном массиве
 				t = arr[j];
 				arr[j] = arr[j + 1];
 				arr[j + 1] = t;
