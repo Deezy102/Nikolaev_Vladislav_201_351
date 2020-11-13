@@ -23,7 +23,7 @@ void print_mas(const int* arr, const int size) {
 	}
 	cout << endl;
 }
-void SumChetPos(int* arr, const int size, int* sum_arr) {
+void SumChetPos(const int* arr, const int size, int* sum_arr) {
 	for (int i = 0; i < size; i++) {
 		int sum = 0;
 		int x = arr[i];
@@ -32,7 +32,7 @@ void SumChetPos(int* arr, const int size, int* sum_arr) {
 			sum += x % 10;//увеличиваем сумму на цифру в четном разряде 
 			x /= 10;//убираем считанный разряд
 		}
-		sum_arr[i] = sum;//записываем в соответсвующий раздел массива для сумм сумму определненного числа
+		sum_arr[i] = sum;//записываем в соответсвующую ячейку массива для сумм сумму числа 
 	}
 }
 void SortChetPos(int* arr, const int size, int* sum_arr) {
@@ -55,7 +55,7 @@ void Sort(int* arr, const int size) {
 	int t = 0;
 	for (int i = 0; i < size; i++) {
 		for (int j = 0; j < size - i - 1; j++) {
-			if ((arr[j] % 10) != (arr[j + 1] % 10)) {
+			if ((arr[j] % 10) != (arr[j + 1] % 10)) {//условие задания добавлено в сортировку пузырьком
 				if (arr[j] % 10 > arr[j + 1] % 10) {
 					t = arr[j];
 					arr[j] = arr[j + 1];
