@@ -53,7 +53,7 @@ int find(char* str, const char* sub_str, const int pos) {
 	int start = 0;
 	int match = 0;
 	for (int i = pos; i < strlen(str); i++) {
-		if (sub_str[match] == str[i]) {
+		/*if (sub_str[match] == str[i]) {
 			if (match == 0) {
 				start = i;
 			}
@@ -67,13 +67,30 @@ int find(char* str, const char* sub_str, const int pos) {
 			match = 0;
 			i--;
 			continue;
+		}*/
+		if (str[i] == sub_str[match]) {
+			start = i;
+			match++;
+			while (str[i + 1] == sub_str[match]) {
+				match++;
+				i++; //проверка с подстрокой
+			}
+			if (match == strlen(sub_str)) {//если кол-во совпалений = длина подстроки
+				match = 0;//обнуление счетчика соответсвий 
+				ptr = start;//запоминание индекса вхождения
+				start = 0;//обнуление хранилище индекса вхождения
+				i--;//для того чтобы проверить последний символ который может быть началом нового вхождения
+			}
+			else {
+				match = 0;
+			}
 		}
 		if (ptr != 0) { break; }
 	}
 	return ptr;
 }
 int* find2(char* str, char* sub_str) {
-	cout << strlen(sub_str) << "<<<<" << endl;
+	
 	int* index = nullptr;
 	
 	index = new int[strlen(str)];//массив для индексов вхождений
@@ -89,7 +106,12 @@ int* find2(char* str, char* sub_str) {
 			match++;
 			while (str[i+1] == sub_str[match]) {
 				match++;
-				i++; //проверка с подстрокой
+				i++;//проверка с подстрокой
+				if (i == strlen(str)) {
+					match--;
+					break;
+				}
+					
 			}
 			if (match == strlen(sub_str)) {//если кол-во совпалений = длина подстроки
 				match = 0;//обнуление счетчика соответсвий 

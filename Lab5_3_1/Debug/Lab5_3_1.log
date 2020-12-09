@@ -1,0 +1,23 @@
+﻿  Lab5_3_1.cpp
+  Matrix3d.cpp
+C:\Users\vlad1\Desktop\Nikolaev_Vlad_201_351\Lab5_3_1\Matrix3d.cpp(15,20): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\vlad1\Desktop\Nikolaev_Vlad_201_351\Lab5_3_1\Matrix3d.cpp(56,20): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\vlad1\Desktop\Nikolaev_Vlad_201_351\Lab5_3_1\Matrix3d.cpp(60,20): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\vlad1\Desktop\Nikolaev_Vlad_201_351\Lab5_3_1\Matrix3d.cpp(64,23): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\vlad1\Desktop\Nikolaev_Vlad_201_351\Lab5_3_1\Matrix3d.cpp(70,20): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\vlad1\Desktop\Nikolaev_Vlad_201_351\Lab5_3_1\Matrix3d.cpp(71,21): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\vlad1\Desktop\Nikolaev_Vlad_201_351\Lab5_3_1\Matrix3d.cpp(80,20): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\vlad1\Desktop\Nikolaev_Vlad_201_351\Lab5_3_1\Matrix3d.cpp(81,21): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\vlad1\Desktop\Nikolaev_Vlad_201_351\Lab5_3_1\Matrix3d.cpp(92,20): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\vlad1\Desktop\Nikolaev_Vlad_201_351\Lab5_3_1\Matrix3d.cpp(93,21): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\vlad1\Desktop\Nikolaev_Vlad_201_351\Lab5_3_1\Matrix3d.cpp(111,20): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\vlad1\Desktop\Nikolaev_Vlad_201_351\Lab5_3_1\Matrix3d.cpp(115,20): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\vlad1\Desktop\Nikolaev_Vlad_201_351\Lab5_3_1\Matrix3d.cpp(119,28): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\vlad1\Desktop\Nikolaev_Vlad_201_351\Lab5_3_1\Matrix3d.cpp(128,20): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\vlad1\Desktop\Nikolaev_Vlad_201_351\Lab5_3_1\Matrix3d.cpp(136,20): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\vlad1\Desktop\Nikolaev_Vlad_201_351\Lab5_3_1\Matrix3d.cpp(164,20): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\vlad1\Desktop\Nikolaev_Vlad_201_351\Lab5_3_1\Matrix3d.cpp(174,20): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\vlad1\Desktop\Nikolaev_Vlad_201_351\Lab5_3_1\Matrix3d.cpp(175,21): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\vlad1\Desktop\Nikolaev_Vlad_201_351\Lab5_3_1\Matrix3d.cpp(177,22): warning C4018: <: несоответствие типов со знаком и без знака
+  Создание кода...
+  Lab5_3_1.vcxproj -> C:\Users\vlad1\Desktop\Nikolaev_Vlad_201_351\Debug\Lab5_3_1.exe

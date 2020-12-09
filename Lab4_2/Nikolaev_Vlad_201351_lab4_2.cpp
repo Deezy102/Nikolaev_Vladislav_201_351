@@ -12,34 +12,40 @@ using std::ofstream;
 
 string file_format(const string file_path_full) {
     string format;
+    //строка формат присваивает часть строки файл_паф_фул
     format.assign(file_path_full, file_path_full.rfind('.'), file_path_full.length());
     return format;
 }
 string file_name(const string file_path_full) {
     string name;
+    //строка нейм присвает имя и расширение файла
     name.assign(file_path_full, file_path_full.rfind(char(92)) + 1, file_path_full.length());
+   //из строки нейм удаляется расширение файла
     name.erase(name.rfind('.'), name.length() - name.rfind('.'));
     return name;
 }
 string file_path_f(const string file_path_full) {
     string path;
-    path.assign(file_path_full, 0, file_path_full.rfind(char(92)));
+    //строка паф присваивает строку с 0 до n-ного символа строки
+    path.assign(file_path_full, 0, file_path_full.rfind(char(92))-1);
     return path;
 }
 char file_disk(const string file_path_full) {
     const char* disk;
+    //переводим стринг в си-стринг и возвращаем нулевой элемент символьного массива
     disk = file_path_full.c_str();
     return disk[0];
 }
 bool file_rename(string* file_path_full) {
-    string buf = *file_path_full; 
-    string rename;
+    string buf = *file_path_full; //принимаем в буфер путь файла
+    string rename; //строка под новое название
     cout << "Введите новое название: \n";
     getline(cin, rename);
-    if (file_format(*file_path_full) != "-1") {
-        if (rename != file_name(*file_path_full)) {
+    if (file_format(*file_path_full) != "-1") {//проверка есть ли название файла в пути файла
+        if (rename != file_name(*file_path_full)) {//проверка на совпадение старого и нового названия 
+            //заменяем старое название в пути файла на новое
             buf.replace(buf.find(file_name(*file_path_full)), file_name(*file_path_full).length(), rename);
-            *file_path_full = buf;
+            *file_path_full = buf; //изменяем изначальный путь файла 
             return true;
         }
         else {
@@ -53,18 +59,22 @@ bool file_rename(string* file_path_full) {
 }
 bool file_copy(const string file_path_full) {
     
-    string copy_path = file_path_full;
-    string buf_copy;
-    ifstream file(file_path_full, ifstream::in); 
-    if (file.is_open() == true) {
-        copy_path.replace(file_path_full.rfind('.'), file_path_full.length() - file_path_full.rfind('.'), "_copy.txt");
+    string copy_path = file_path_full; //помещаем путь файла в строку для пути копии файла
+    string buf_copy; //буфер для передачи данных из оригинала в копию
+    ifstream file(file_path_full, ifstream::in); //файловый ввод по пути из файл_паф_фул с режимом открытия на чтение
+    if (file.is_open() == true) {//проверка открыт ли оригинал 
+        //изменяем название в пути для копии 
+        copy_path.replace(file_path_full.rfind(char(92)), file_path_full.rfind('.') - file_path_full.rfind(char(92)), file_name(file_path_full) + "_copy");
+        
         cout << copy_path << endl;
-        ofstream copy;
-        copy.open(copy_path, ofstream::out);
-        if (copy.is_open() == true) {
+        //создание объекта класса файлового вывода
+        ofstream copy; 
+        copy.open(copy_path, ofstream::out); //создаем и открываем копию с режимом для записи
+        if (copy.is_open() == true) {//проверяем открылась ли копия 
             while (getline(file, buf_copy)) {
-                copy << buf_copy << endl;
+                copy << buf_copy << endl;//пока считываются строки из оригинала вкладываем их в копию
             }
+            //закрываем оба файла
             file.close();
             copy.close();
             return true;
@@ -95,7 +105,7 @@ int main()
         case 1: {
             string format;
             cout << "Введите полное расположение файла: \n";
-            //C:\Users\vlad1\Desktop\piu\app.exe
+            //C:\\Users\\vlad1\\Desktop\\piu\\test.txt
             getline(cin, file_path);
             format = file_format(file_path);
             cout << format << endl;
@@ -142,7 +152,7 @@ int main()
         case 6: {
             bool flag;
             cout << "Введите полное расположение файла: \n";
-            getline(cin, file_path);
+            getline(cin, file_path);//C:\Users\\vlad1\\Desktop\\piu\\test.txt
             flag = file_copy(file_path);
             if (flag == true) {
                 cout << "Копирование завершено\n";
