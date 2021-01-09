@@ -1,0 +1,5 @@
+﻿  Lab6_1.cpp
+C:\Users\vlad1\Desktop\Nikolaev_Vlad_201_351\Lab6_1\Lab6_1.cpp(11,20): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\vlad1\Desktop\Nikolaev_Vlad_201_351\Lab6_1\Lab6_1.cpp(48,7): warning C4101: temp: неиспользованная локальная переменная
+C:\Users\vlad1\Desktop\Nikolaev_Vlad_201_351\Lab6_1\Lab6_1.cpp(43): warning C4715: check: значение возвращается не при всех путях выполнения
+  Lab6_1.vcxproj -> C:\Users\vlad1\Desktop\Nikolaev_Vlad_201_351\Debug\Lab6_1.exe

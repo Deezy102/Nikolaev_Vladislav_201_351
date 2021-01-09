@@ -87,8 +87,8 @@ matr& operator-(matr& matrA, const matr& matrB) {
 		matrA.elems[i] = matrA.elems[i] - matrB.elems[i];
 	return matrA;
 }
-const matr operator-(const matr& matrA) {
-	matr MatrCopy(matrA);
+ matr matr::operator-() {
+	matr MatrCopy(*this);
 	for (int i = 0; i < MatrCopy.get_rows() * MatrCopy.get_rows(); i++) {
 		for (int j = 0; j < MatrCopy.get_rows(); j++) {
 			if (MatrCopy.get_elem(i, j) == 0) {
@@ -97,7 +97,7 @@ const matr operator-(const matr& matrA) {
 			MatrCopy.set_element(i, j, -MatrCopy.get_elem(i, j));
 		}
 	}
-	return matrA;
+	return MatrCopy;
 }
 //matr operator*(const matr& matrA, const matr& matrB) {
 //	matr MatrCopy(matrA);

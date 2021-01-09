@@ -1,0 +1,59 @@
+﻿  Lab6_2.cpp
+C:\Users\vlad1\Desktop\Nikolaev_Vlad_201_351\Lab6_2\Lab6_2.cpp(18,20): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\vlad1\Desktop\Nikolaev_Vlad_201_351\Lab6_2\Lab6_2.cpp(46,20): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\vlad1\Desktop\Nikolaev_Vlad_201_351\Lab6_2\Lab6_2.cpp(60,20): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\vlad1\Desktop\Nikolaev_Vlad_201_351\Lab6_2\Lab6_2.cpp(69,20): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\vlad1\Desktop\Nikolaev_Vlad_201_351\Lab6_2\Lab6_2.cpp(70,21): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\vlad1\Desktop\Nikolaev_Vlad_201_351\Lab6_2\Lab6_2.cpp(78,20): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\vlad1\Desktop\Nikolaev_Vlad_201_351\Lab6_2\Lab6_2.cpp(88,20): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\vlad1\Desktop\Nikolaev_Vlad_201_351\Lab6_2\Lab6_2.cpp(93,27): error C2679: бинарный "[": не найден оператор, принимающий правый операнд типа "std::_Deque_iterator<std::_Deque_val<std::_Deque_simple_types<_Ty>>>" (или приемлемое преобразование отсутствует)
+          with
+          [
+              _Ty=int
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\include\deque(1039,26): message : может быть "Coords &std::deque<Coords,std::allocator<Coords>>::operator [](unsigned int) noexcept"
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\include\deque(1031,32): message : или       "const Coords &std::deque<Coords,std::allocator<Coords>>::operator [](unsigned int) noexcept const"
+C:\Users\vlad1\Desktop\Nikolaev_Vlad_201_351\Lab6_2\Lab6_2.cpp(93,27): message : при попытке сопоставить список аргументов "(std::deque<Coords,std::allocator<Coords>>, std::_Deque_iterator<std::_Deque_val<std::_Deque_simple_types<_Ty>>>)"
+          with
+          [
+              _Ty=int
+          ]
+C:\Users\vlad1\Desktop\Nikolaev_Vlad_201_351\Lab6_2\Lab6_2.cpp(94,14): error C2679: бинарный "[": не найден оператор, принимающий правый операнд типа "std::_Deque_iterator<std::_Deque_val<std::_Deque_simple_types<_Ty>>>" (или приемлемое преобразование отсутствует)
+          with
+          [
+              _Ty=int
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\include\deque(1039,26): message : может быть "Coords &std::deque<Coords,std::allocator<Coords>>::operator [](unsigned int) noexcept"
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\include\deque(1031,32): message : или       "const Coords &std::deque<Coords,std::allocator<Coords>>::operator [](unsigned int) noexcept const"
+C:\Users\vlad1\Desktop\Nikolaev_Vlad_201_351\Lab6_2\Lab6_2.cpp(94,14): message : при попытке сопоставить список аргументов "(std::deque<Coords,std::allocator<Coords>>, std::_Deque_iterator<std::_Deque_val<std::_Deque_simple_types<_Ty>>>)"
+          with
+          [
+              _Ty=int
+          ]
+C:\Users\vlad1\Desktop\Nikolaev_Vlad_201_351\Lab6_2\Lab6_2.cpp(97,27): error C2679: бинарный "[": не найден оператор, принимающий правый операнд типа "std::_Deque_iterator<std::_Deque_val<std::_Deque_simple_types<_Ty>>>" (или приемлемое преобразование отсутствует)
+          with
+          [
+              _Ty=int
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\include\deque(1039,26): message : может быть "Coords &std::deque<Coords,std::allocator<Coords>>::operator [](unsigned int) noexcept"
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\include\deque(1031,32): message : или       "const Coords &std::deque<Coords,std::allocator<Coords>>::operator [](unsigned int) noexcept const"
+C:\Users\vlad1\Desktop\Nikolaev_Vlad_201_351\Lab6_2\Lab6_2.cpp(97,27): message : при попытке сопоставить список аргументов "(std::deque<Coords,std::allocator<Coords>>, std::_Deque_iterator<std::_Deque_val<std::_Deque_simple_types<_Ty>>>)"
+          with
+          [
+              _Ty=int
+          ]
+C:\Users\vlad1\Desktop\Nikolaev_Vlad_201_351\Lab6_2\Lab6_2.cpp(100,17): error C2664: "std::_Deque_iterator<std::_Deque_val<std::_Deque_simple_types<_Ty>>> std::deque<_Ty,std::allocator<_Ty>>::erase(std::_Deque_const_iterator<std::_Deque_val<std::_Deque_simple_types<_Ty>>>) noexcept(<expr>)": невозможно преобразовать аргумент 1 из "std::_Deque_iterator<std::_Deque_val<std::_Deque_simple_types<_Ty>>>" в "std::_Deque_const_iterator<std::_Deque_val<std::_Deque_simple_types<_Ty>>>"
+          with
+          [
+              _Ty=Coords
+          ]
+          and
+          [
+              _Ty=int
+          ]
+          and
+          [
+              _Ty=Coords
+          ]
+C:\Users\vlad1\Desktop\Nikolaev_Vlad_201_351\Lab6_2\Lab6_2.cpp(100,16): message : Для выполнения данного преобразования нет доступного оператора преобразования, определенного пользователем, или вызов оператора невозможен
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\include\deque(1274,14): message : см. объявление "std::deque<Coords,std::allocator<Coords>>::erase"

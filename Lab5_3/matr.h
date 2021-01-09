@@ -24,7 +24,6 @@ public:
 	friend std::ostream& operator<< (std::ostream& out, const matr& matrA);
 	friend matr operator+(const matr& matrA, const matr& matrB);
 	friend matr& operator-(matr& matrA, const matr& matrB);
-	friend matr& operator-(matr& matrA);
+	matr operator-();
 	friend matr operator*(const matr& matrA, const matr& matrB);
 };
-const matr operator-(const matr& matr);

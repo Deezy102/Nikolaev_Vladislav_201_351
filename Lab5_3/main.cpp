@@ -12,8 +12,11 @@ int main()
 	matr matrB;
 	cin >> matrA >> matrB;
 	cout << "matrA =\n" << matrA;
-	cout << matrA + matrB;
-	cout << matrA * matrB;
+	cout << "\nmatrB =\n" << matrB;
+
+	cout << "A+B =\n" << matrA + matrB;
+	cout << "A*B =\n" << matrA * matrB;
+	cout << "-A" << -matrA;
 	//while (true) {
 	//	cout << "Select task:\n" << "1. input_matr\n"
 	//		<< "2. print_matr\n"
