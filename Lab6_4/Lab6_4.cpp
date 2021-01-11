@@ -9,6 +9,7 @@ using std::cin;
 
 int main() {
 	
+	
 	set<std::pair<int, int>> setlist;
 	int choice;
 	int n;

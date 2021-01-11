@@ -1,20 +1,50 @@
-﻿// Lab6_5.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается выполнение программы.
-//
+﻿#include <iostream>
+#include <fstream>
+#include <list>
+#include <string>
+#include <utility>
 
-#include <iostream>
+using std::pair;
+using std::string;
+using std::cout;
+using std::cin;
+using std::list;
+using std::ifstream;
 
-int main()
-{
-    std::cout << "Hello World!\n";
+bool Comparing(pair<int, string> left, pair<int, string> right) {
+	if (left.first < right.first) {
+		return true;
+	}
+	else {
+		return false;
+	}
 }
 
-// Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"
-// Отладка программы: F5 или меню "Отладка" > "Запустить отладку"
+int main() {
 
-// Советы по началу работы 
-//   1. В окне обозревателя решений можно добавлять файлы и управлять ими.
-//   2. В окне Team Explorer можно подключиться к системе управления версиями.
-//   3. В окне "Выходные данные" можно просматривать выходные данные сборки и другие сообщения.
-//   4. В окне "Список ошибок" можно просматривать ошибки.
-//   5. Последовательно выберите пункты меню "Проект" > "Добавить новый элемент", чтобы создать файлы кода, или "Проект" > "Добавить существующий элемент", чтобы добавить в проект существующие файлы кода.
-//   6. Чтобы снова открыть этот проект позже, выберите пункты меню "Файл" > "Открыть" > "Проект" и выберите SLN-файл.
+	int group;
+	string surname;
+	list<pair<int, string>> studlist;
+	list<pair<int, string>>::iterator iter;
+
+	ifstream studfile("students_list.txt", std::ios::in);
+	if (!studfile.is_open()) {
+		cout << "try again\n";
+	}
+	else {
+		while (!studfile.eof()) {
+			int group = 0;
+			string surname;
+			studfile >> group >> surname;
+			studlist.push_back(make_pair(group, surname));
+			
+		}
+		
+	}
+
+	studlist.sort(Comparing);
+	for (iter = studlist.begin(); iter != studlist.end(); iter++) {
+		cout << iter->first << "  "<<iter->second << std::endl;
+	}
+	return 0;
+}

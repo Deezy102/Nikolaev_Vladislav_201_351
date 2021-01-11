@@ -1,20 +1,58 @@
-﻿// Lab6_6.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается выполнение программы.
-//
-
+﻿#include <map>
+#include <fstream>
 #include <iostream>
+#include <string>
 
-int main()
-{
-    std::cout << "Hello World!\n";
+using std::string;
+using std::cout;
+using std::cin;
+using std::map;
+using std::ifstream;
+
+int main() {
+	
+	map<string, int>::iterator iter;
+	map<string, int> text_map;
+	int total = 0;
+	ifstream textfile("text_example.txt", std::ios::in);
+	if (!textfile.is_open()) {
+		cout << "try again\n";
+	}
+	else {
+		while (!textfile.eof()) {
+
+			string simple;
+			textfile >> simple;
+			
+			if ((!((simple[0] <= 'Z' && simple[0] >= 'А')||(simple[0] <= 'z' && simple[0] >= 'a')))||((simple[0]=='"')||(simple[0] == '('))) {
+				simple.erase(0);
+			}
+			if (simple.empty()) {
+				continue;
+			}
+			if (!(simple[0] <= 'z' && simple[0] >= 'a')) {
+				simple[0] = char(int(simple[0]) + 32);
+			}
+			if (!(simple[simple.length()-1] <= 'z' && simple[simple.length()-1] >= 'a')) {
+				simple.erase(simple.length()-1);
+			}
+			if (simple.empty()){
+				continue;
+			}
+			if (text_map.count(simple) != 0) {
+				text_map[simple]++;
+			}
+			else {
+				text_map.insert({ simple, 1 });
+			}
+
+			total++;
+
+		}
+	}
+	cout << "Total words is " << total << std::endl;
+	for (iter = text_map.begin(); iter != text_map.end(); iter++) {
+		cout << (*iter).first <<  "___" << iter->second / (total / 100.) << '%' << std::endl;
+	}
+	return 0;
 }
-
-// Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"
-// Отладка программы: F5 или меню "Отладка" > "Запустить отладку"
-
-// Советы по началу работы 
-//   1. В окне обозревателя решений можно добавлять файлы и управлять ими.
-//   2. В окне Team Explorer можно подключиться к системе управления версиями.
-//   3. В окне "Выходные данные" можно просматривать выходные данные сборки и другие сообщения.
-//   4. В окне "Список ошибок" можно просматривать ошибки.
-//   5. Последовательно выберите пункты меню "Проект" > "Добавить новый элемент", чтобы создать файлы кода, или "Проект" > "Добавить существующий элемент", чтобы добавить в проект существующие файлы кода.
-//   6. Чтобы снова открыть этот проект позже, выберите пункты меню "Файл" > "Открыть" > "Проект" и выберите SLN-файл.
