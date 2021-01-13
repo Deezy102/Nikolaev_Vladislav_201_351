@@ -1,74 +1,58 @@
 ﻿#include <iostream>
 #include <queue>
-#include <deque>
-using std::deque;
-using std::queue;
-using std::cout;
-using std::cin;
 
-int FindMin(int a, int b, int c) {
-	int min;
-	if (a < b) {
-		min = a;
-	}
-	else {
-		min = b;
-	}
-	if (min > c) {
-		min = c;
-	}
-	return min;
+using std::cin;
+using std::cout;
+using std::queue;
+
+int minnum(int a, int b, int c) {
+    int min;
+    if (a < b) {
+        min = a;
+    }
+    else {
+        min = b;
+    }
+    if (min > c) {
+        min = c;
+    }
+    return min;
+}
+
+void print_and_add(int t, std::queue<int>& q2, std::queue<int>& q3, std::queue<int>& q5) {
+    if (t != 1) {
+        std::cout << t << ' ';
+    }
+    q2.push(t * 2);
+    q3.push(t * 3);
+    q5.push(t * 5);
 }
 
 int main()
 {
-	queue<int> q2, q3, q5;
-	deque<int> dq_all;
-	q2.push(2);
-	q3.push(3);
-	q5.push(5);
-	cout << "Input N:";
-	int n;
-	cin >> n;
-	while (q2.size() + q3.size() + q5.size() < n) {
-		int min = FindMin(q2.back(), q3.back(), q5.back());
-		if (min == q2.back()) {
-			q2.push(FindMin(q2.back() * 2, q2.back() * 3, q2.back() * 5));
-		}
-		if (min == q3.back()) {
-			q3.push(FindMin(q3.back() * 2, q3.back() * 3, q3.back() * 5));
-		}
-		if (min == q5.back()) {
-			q5.push(FindMin(q5.back() * 2, q5.back() * 3, q5.back() * 5));
-		}
-	}
-	int length = q2.size();
-	for (int i = 0; i < length; i++) {
-		dq_all.push_back(q2.front());
-		q2.pop();
-	}
-	length = q3.size();
-	for (int i = 0; i < length; i++) {
-		dq_all.push_back(q3.front());
-		q3.pop();
-	}
-	length = q5.size();
-	for (int i = 0; i < length; i++) {
-		dq_all.push_back(q5.front());
-		q5.pop();
-	}
+    cout << "Input number:\n";
+    int n;
+    cin >> n;
 
-	for (int i = 0; i < dq_all.size() - 1; i++) {
-		for (int j = 0; j < dq_all.size() - i - 1; j++) {
-			if (dq_all[j] > dq_all[j + 1]) {
-				int temp = dq_all[j];
-				dq_all[j] = dq_all[j + 1];
-				dq_all[j + 1] = temp;
-			}
-		}
-	}
-	for (int i = 0; i < dq_all.size(); i++) {
-		cout << dq_all[i] << std::endl;
-	}
-	return 0;
+    queue<int> q2;
+    queue<int> q3;
+    queue<int> q5;
+
+    q2.push(2);
+    q3.push(3);
+    q5.push(5);
+    int k = 0;
+
+    while (k != n) {
+        int x = minnum(q2.front(), q3.front(), q5.front());
+        print_and_add(x, q2, q3, q5);
+        k++;
+        if (x == q2.front())
+            q2.pop();
+        if (x == q3.front())
+            q3.pop();
+        if (x == q5.front())
+            q5.pop();
+    }
+    return 0;
 }
