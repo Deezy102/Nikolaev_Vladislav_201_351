@@ -10,7 +10,7 @@ using std::cin;
 int main() {
 	
 	
-	set<std::pair<int, int>> setlist;
+	set<std::pair<int, int>> setlist; //сет пар <id, result>
 	int choice;
 	int n;
 
@@ -27,16 +27,17 @@ int main() {
 				cin >> id >> score;
 				for (auto i = setlist.begin(); i != setlist.end(); i++) {
 					if (i->first == id) {
-						flag = true;
+						flag = true; //проверка есть ли в сете уже такой айди
 					}
 				}
-				if (flag == false) {
+				if (flag == false) { //если нет то добавляем пару айди и результат
 					setlist.insert(std::make_pair(id, score));
 				}
 			}
 			break;
 		}
 		case 2: {
+			//вывод списка айди и результатов за тест
 			for (auto i = setlist.begin(); i != setlist.end(); i++) {
 				cout << "Student's ID:" << i->first << " Score:" << i->second << std::endl;
 			}

@@ -9,13 +9,13 @@ protected:
 	string name;
 	int age;
 public:
-	Human();
-	Human(string a, string b, int c);
-	~Human();
-	string get_surname();
-	string get_name();
-	int get_age();
-
+	Human();//конструктор по умолчанию
+	Human(string a, string b, int c);//конструктор через фамилию имя и возраст
+	~Human();//деструктор класса
+	string get_surname();//функция получения фамилии
+	string get_name();//функция получения имени
+	int get_age();//функция получения возраста
+	//перегрузка оператора вывода для данного класса
 	friend std::ostream& operator<< (std::ostream& out, const Human& src);
 
 };
