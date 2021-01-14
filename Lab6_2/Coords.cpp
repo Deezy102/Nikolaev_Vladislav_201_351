@@ -2,13 +2,11 @@
 Coords::Coords(const Coords& A) {
 	this->pos_x = A.pos_x;
 	this->pos_y = A.pos_y;
-	this->index = A.index;
 	this->angle = A.angle;
 }
-Coords::Coords(int x, int y, int i) {
+Coords::Coords(int x, int y) {
 	pos_x = x;
 	pos_y = y;
-	index = i;
 	angle = 0;
 }
 Coords::~Coords() {
@@ -22,9 +20,7 @@ void Coords::set_x(int x) {
 void Coords::set_y(int y) {
 	pos_y = y;
 }
-void Coords::set_index(int i) {
-	index = i;
-}
+
 double Coords::get_angle() {
 	return angle;
 }
@@ -34,15 +30,17 @@ int Coords::get_y() {
 int Coords::get_x() {
 	return pos_x;
 }
-int Coords::get_index() {
-	return index;
-}
 
 Coords& Coords::operator=(const Coords& A)
 {
 	pos_x = A.pos_x;
 	pos_y = A.pos_y;
-	index = A.index;
 	angle = A.angle;
 	return *this;
+}
+
+bool operator==(const Coords& left, const Coords& right)
+{
+	return ((left.pos_x == right.pos_x)
+		&& (left.pos_y == right.pos_y));
 }
