@@ -44,7 +44,7 @@ bool Compare(Temp left, Temp right) {
 	}
 }
 //функция быстрой сортировки с заменой сравнения элементов на функцию сравнения
-//которая передается в качестве аргумента по указателю
+//которая передается в качестве аргумента как указатель а в самой функции разыменовывается 
 template <typename Temp>
 void QuickSort(vector<Temp>& data, int left, int right, bool (*Compare)(Temp, Temp))
 {
@@ -80,7 +80,7 @@ int main()
 	//создание и инициализация векторов
 	vector<double> dataDbl{ 1.4, 2.3, 10.001, 0.5, -90.7, -4.2 };
 	vector<string> dataStr{ "giraffe" , "fish", "whale", "orange", "apple" };
-	vector<Human> dataHum{ {"Ryabov", "Kostya", 18}, {"Ogirok", "Sonya", 20}, {"Nikolaev", "Vlad", 19}, {"Kondrashov", "Egor", 18}};
+	vector<Human> dataHum{ {"Ryabov", "Kostya", 18}, {"Ogirok", "Sonya", 20}, {"Nikolaev", "Vlad", 19}, {"Kondrashov", "Egor", 24}};
 	//вызов функции сортировки и вывод вектора с элементами типа дабл
 	QuickSort(dataDbl, 0, dataDbl.size() - 1, Compare);
 	for (int i = 0; i < dataDbl.size(); i++) {

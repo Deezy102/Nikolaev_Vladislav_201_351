@@ -19,14 +19,15 @@ int main() {
 		cin >> choice;
 		switch(choice){
 		case 1: {
-			cout << "Input number of students:";
+			set<std::pair<int, int>>::iterator j;
+			cout << "How many times has the test been solved:";
 			cin >> n;
 			for (int i = 0; i < n; i++) {
 				bool flag = false;
 				int id, score;
 				cin >> id >> score;
-				for (auto i = setlist.begin(); i != setlist.end(); i++) {
-					if (i->first == id) {
+				for (auto j = setlist.begin(); j != setlist.end(); j++) {
+					if (j->first == id) {
 						flag = true; //проверка есть ли в сете уже такой айди
 					}
 				}
@@ -38,6 +39,7 @@ int main() {
 		}
 		case 2: {
 			//вывод списка айди и результатов за тест
+			set<std::pair<int, int>>::iterator i;
 			for (auto i = setlist.begin(); i != setlist.end(); i++) {
 				cout << "Student's ID:" << i->first << " Score:" << i->second << std::endl;
 			}

@@ -10,7 +10,7 @@ using std::cout;
 using std::cin;
 using std::list;
 using std::ifstream;
-//функция сравнения номер группы для функции сорт 
+//функция сравнения номеров групп для функции сорт 
 bool Comparing(pair<int, string> left, pair<int, string> right) {
 	if (left.first < right.first) {
 		return true;

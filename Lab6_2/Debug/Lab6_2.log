@@ -1,11 +1,9 @@
-﻿  Coords.cpp
-  Lab6_2.cpp
+﻿  Lab6_2.cpp
 C:\Users\vlad1\Desktop\Nikolaev_Vlad_201_351\Lab6_2\Lab6_2.cpp(18,20): warning C4018: <: несоответствие типов со знаком и без знака
 C:\Users\vlad1\Desktop\Nikolaev_Vlad_201_351\Lab6_2\Lab6_2.cpp(55,20): warning C4018: <: несоответствие типов со знаком и без знака
 C:\Users\vlad1\Desktop\Nikolaev_Vlad_201_351\Lab6_2\Lab6_2.cpp(69,20): warning C4018: <: несоответствие типов со знаком и без знака
 C:\Users\vlad1\Desktop\Nikolaev_Vlad_201_351\Lab6_2\Lab6_2.cpp(78,20): warning C4018: <: несоответствие типов со знаком и без знака
 C:\Users\vlad1\Desktop\Nikolaev_Vlad_201_351\Lab6_2\Lab6_2.cpp(79,21): warning C4018: <: несоответствие типов со знаком и без знака
-C:\Users\vlad1\Desktop\Nikolaev_Vlad_201_351\Lab6_2\Lab6_2.cpp(111,20): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\vlad1\Desktop\Nikolaev_Vlad_201_351\Lab6_2\Lab6_2.cpp(112,20): warning C4018: <: несоответствие типов со знаком и без знака
 C:\Users\vlad1\Desktop\Nikolaev_Vlad_201_351\Lab6_2\Lab6_2.cpp(161,23): warning C4018: <: несоответствие типов со знаком и без знака
-  Создание кода...
   Lab6_2.vcxproj -> C:\Users\vlad1\Desktop\Nikolaev_Vlad_201_351\Debug\Lab6_2.exe
