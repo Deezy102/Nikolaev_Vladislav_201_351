@@ -70,9 +70,9 @@ void QuickSort(vector<Temp>& data, int left, int right, bool (*Compare)(Temp, Te
 		}
 	}
 	if (j > left)
-		quickSort(data, left, j, Compare);//рекурсия для сортировки элементов до пивота
+		QuickSort(data, left, j, Compare);//рекурсия для сортировки элементов до пивота
 	if (i < right)
-		quickSort(data, i, right, Compare); //рекурсия для сортировки после пивота
+		QuickSort(data, i, right, Compare); //рекурсия для сортировки после пивота
 }
 
 int main()
